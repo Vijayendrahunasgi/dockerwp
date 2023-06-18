@@ -1,3 +1,4 @@
 #!/bin/bash
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
-dnf install -y https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+yum install -y yum-utils
+yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+yum -y install terraform
